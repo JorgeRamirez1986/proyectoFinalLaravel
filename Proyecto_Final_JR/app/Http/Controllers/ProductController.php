@@ -11,6 +11,11 @@ use Illuminate\Support\Facades\Mail;
 
 class ProductController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -46,7 +51,7 @@ class ProductController extends Controller
     {
         $product=Product::create($request->all());
 
-        Mail::to('jean.3801821095@ucaldas.edu.co')
+        Mail::to('jorge.3801721112@ucaldas.edu.co')
             ->send(new CreateNewProduct($product));
 
         return redirect('/products');

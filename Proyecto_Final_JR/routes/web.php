@@ -19,7 +19,7 @@ use App\Providers\RouteServiceProvider;
 
 
 Route::get('testDBConection', [HomeController::class, 'testDBConection']);
-Route::resource('/', \App\Http\Controllers\ProductController::class)->only('index');
+Route::resource('/', \App\Http\Controllers\ProductController::class)->middleware('auth');
 Route::resource('/categories',\App\Http\Controllers\CategoryController::class)->only('index');
 Route::resource('/categories',\App\Http\Controllers\CategoryController::class)
     ->middleware('auth');
@@ -32,6 +32,12 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return view('products.index',[
+            "products" =>\App\Models\Product::all()
+        ]);
     })->name('dashboard');
 });
+
+
+//"categories"=>\App\Models\Category::all(),
+//->only('index')

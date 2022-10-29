@@ -6,7 +6,7 @@
     <article class="container">
         <section class="row">
             <div class="text-center">
-                <h1 class="text-3xl text-gray-700-600 mb-2 uppercase">Categories</h1>
+                <h1 class="text-3xl text-gray-700-600 mb-2 uppercase">Boutique</h1>
             </div>
         </section>
         <br>
@@ -14,6 +14,9 @@
         <section class="row">
             <div class="col-4 d-grid">
                 <a href="/categories/create" class="btn btn-success text-center">Create new category</a>
+                <br>
+                <a href="/products/create" class="btn btn-success text-right"  >Create new Product</a>
+
             </div>
         </section>
     </article>
@@ -25,7 +28,6 @@
         <div class="row">
 
             @foreach($categories as $category)
-
                 <div class="container">
                     <div class="row">
                         <div class="col-10">

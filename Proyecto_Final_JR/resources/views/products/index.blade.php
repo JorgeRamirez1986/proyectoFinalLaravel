@@ -26,6 +26,10 @@
                 @auth
                     <a href="/products/create" class="btn btn-success text-center">Create new product</a>
                 @endauth
+                <br>
+                    @auth
+                        <a href="/categories/create" class="btn btn-success text-center">Create new Category</a>
+                    @endauth
                 @guest
                     <div style="display:flex; justify-content:flex-end; width:300%; padding:0;">
                         <a href="/login" class="btn btn-success text-center ">Login</a>
