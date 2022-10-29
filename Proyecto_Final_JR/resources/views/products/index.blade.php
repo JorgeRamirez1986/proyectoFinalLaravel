@@ -7,7 +7,7 @@
     @auth
         <x-slot name="header">
             <h2 class="front-semibold text-xl text-gray-700 leading-tight">
-                {{__('Product edit')}}
+                {{__('Product list')}}
             </h2>
         </x-slot>
     @endauth

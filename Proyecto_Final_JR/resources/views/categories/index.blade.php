@@ -3,6 +3,14 @@
 @section('title') Categories list @endsection
 
 @section('content')
+
+    @auth
+        <x-slot name="header">
+            <h2 class="front-semibold text-xl text-gray-700 leading-tight">
+                {{__('Categories list')}}
+            </h2>
+        </x-slot>
+    @endauth
     <article class="container">
         <section class="row">
             <div class="text-center">
